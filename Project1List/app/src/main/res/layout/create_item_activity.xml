@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/title"
+        android:layout_below="@+id/finisedButton"
+        android:background="@android:color/holo_green_light"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Create Item"
+        android:textSize="50dp"
+        android:textAlignment="center"/>
+    <EditText
+        android:id="@+id/itemName"
+        android:hint="Title"
+        android:layout_below="@+id/title"
+        android:layout_marginTop="10dp"
+        android:singleLine="true"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+    <EditText
+        android:id="@+id/itemLocation"
+        android:hint="Location"
+        android:singleLine="true"
+        android:layout_below="@id/itemName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+    <EditText
+        android:id="@+id/itemDescription"
+        android:hint="Description"
+        android:layout_below="@+id/itemLocation"
+        android:maxLines="4"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+    <Button
+        android:id="@+id/finisedButton"
+        android:background="@android:color/holo_green_light"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Finish"
+        android:onClick="finish"/>
+    <LinearLayout
+        android:id="@+id/addListPanel"
+        android:layout_below="@id/itemDescription"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <EditText
+            android:id="@+id/editText"
+            android:hint="Add item"
+            android:layout_width="0px"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"/>
+        <Button
+            android:id="@+id/addItem"
+            android:layout_weight=".5"
+            android:background="@android:color/holo_green_light"
+            android:layout_width="0px"
+            android:layout_height="wrap_content"
+            android:text="Add"
+            android:onClick="add"/>
+    </LinearLayout>
+
+    <ListView
+        android:id="@+id/itemStrings"
+        android:layout_below="@+id/addListPanel"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+    </ListView>
+
+
+
+</RelativeLayout>
